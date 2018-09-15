@@ -1,0 +1,29 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "myformlib"
+author = "Atsushi Odagiri"
+author-email = "aodagx@gmail.com"
+home-page = "https://gitlab.com/aodag/myformlib"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+requires = [
+    "webhelpers2",
+    "attrs",
+]
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-randomly",
+    "pytest-mock",
+]
+
+dev = [
+    "black",
+    "flake8",
+    "doc8",
+]
